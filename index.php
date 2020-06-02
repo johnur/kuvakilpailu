@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "root", "image_upload");
+  $db = mysqli_connect("", "", "", "image_upload");
 
   // Initialize message variable
   $msg = "";
