@@ -1,0 +1,480 @@
+/*
+Name: G-work harkkatehtävä;
+version: 1.0;
+author: Johanna-Kristiina;
+*/
+
+body {
+ background: -moz-linear-gradient(bottom, rgba(229, 0, 124, 0) 19%, rgba(229, 0, 124, 1) 24%, rgba(229, 0, 124, 0.65) 100%), url('/images/bg2.JPEG') no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(229, 0, 124, 1)), color-stop(59%, rgba(229, 0, 124, 1)), color-stop(100%, rgba(229, 0, 124, 0.65))), url('images/bg2.JPEG') no-repeat;
+  background: -webkit-linear-gradient(bottom, rgba(229, 0, 124, 0) 19%, rgba(229, 0, 124, 1) 24%, rgba(229, 0, 124, 1) 100%), url('images/bg2.JPEG') no-repeat;
+  background: -ms-linear-gradient(bottom, rgba(229, 0, 124, 0) 19%, rgba(229, 0, 124, 1) 24%, rgba(229, 0, 124, 0.65) 100%), url('images/bg2.JPEG') no-repeat;
+  background: linear-gradient(to bottom, rgba(229, 0, 124, 0) 19%, rgba(229, 0, 124, 1) 24%, rgba(229, 0, 124, 0.65) 100%), url('images/bg2.JPEG') no-repeat;
+  height: 200px;
+  );
+}
+
+#section1 {
+	background-color: white;
+	margin-left: 150px;
+	margin-top: 153px;
+	width: 1600px;
+	height: 847px;
+	align-items: center;
+	padding-right: 170px;
+	margin-bottom: 20px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50% ;
+}
+.left {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  width: 550px;
+  height: 209px;
+}
+
+.left > p {
+	font-family: Vinkel-Light;
+	font-size: 24px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 40.08px;
+	margin-left: 139px;
+	width: 550px;
+}
+
+.left > h1 {
+	margin-left: 139px;
+	margin-top: 172px;
+	font-family: Vinkel-Bold;
+	font-size: 72px;
+	color: #E5007C;
+	letter-spacing: 0;
+	line-height: 86.4px;
+}
+
+.right { 
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  width: 800px;
+  height: 660px;
+}
+
+#pic {
+	max-width: 800px;
+	max-height: 800px;
+	left: 1010px;
+	margin-top: -53px;
+	padding-right: -60px;
+	position: absolute;
+}
+
+
+#button1 {
+	border: 3px solid #E5007C;
+	border-radius: 24px;
+	background-color: white;
+	font-family: "Vinkel-Bold", Arial, sans-serif;
+	font-size: 16px;
+	color: #E5007C;
+	letter-spacing: 2px;
+	margin-left: 139px;
+	margin-top: 35px;
+	margin-bottom: 141px;
+	width: 190px
+	height: 48px;
+}
+#button1 > p {
+	padding-left: 23px;
+	margin-right: 20px;
+	margin-top: 13px;
+	margin-bottom: 12px;
+}
+/*section 2*/
+
+
+
+#section2 {
+	background-color: white;
+	position: center;
+	margin-left: 150px;
+	width: 1600px;
+	height: 1340px;
+	align-items: center;
+	right: 170px;
+	margin-bottom: 20px;
+}
+
+#section2 > h2{
+font-family: Vinkel-Bold;
+font-size: 42px;
+color: #E5007C;
+letter-spacing: 0;
+text-align: center;
+line-height: 50.4px;
+padding-top: 88px;
+
+}
+
+#section2 > p {
+font-family: Vinkel-Regular, Arial, sans-serif;
+font-size: 18px;
+color: #000000;
+letter-spacing: 0;
+text-align: center;
+line-height: 50.4px;
+margin-top: -30px;
+}
+
+
+#section2 > h2 {
+font-family: Vinkel-Bold;
+font-size: 42px;
+color: #E5007C;
+letter-spacing: 0;
+line-height: 50.4px;
+padding-top: 88px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  padding-left: 220px;
+  padding-right: 200px;
+  padding-top: 56px;
+}
+.grid > div {
+  height: 280px;
+  width: 280px;
+  padding-bottom: 200px;
+
+}
+.grid > div > img {
+  height: 280px;
+  width: 280px;
+  padding-bottom: 20px;
+}
+
+#voteBtn {
+	width: 280px;
+	height: 48px;
+	display: inline-block;
+	position: relative;
+	background: #FFFFFF;
+	border-radius: 24px;
+	font-family: Vinkel-Bold;
+	font-size: 16px;
+	text-align: center;
+	color: #E5007C;
+	letter-spacing: 2px;
+	border: 3px solid #E5007C;
+}
+
+#voteBtn input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+
+#picTitle {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #4A4A4A;
+	letter-spacing: 0;
+	font-weight: bold;
+}
+
+#picAuthor {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: #4A4A4A;
+	letter-spacing: 1.75px;
+	text-transform: uppercase;
+	}
+
+/*section 3*/
+
+#section3 {
+	background-color: white;
+	margin-left: 150px;
+	width: 1600px;
+	height: 681px;
+	align-items: center;
+	right: 170px;
+	margin-bottom: 20px;
+}
+
+#section3Header {
+font-family: Vinkel-Bold;
+font-size: 42px;
+color: #E5007C;
+letter-spacing: 0;
+line-height: 50.4px;
+padding-left: 222px;
+margin-top: 100px;
+width: 550px;
+}
+
+#section3text {
+	margin-left: 222px;
+	margin-top: 38px;
+	font-family: Vinkel-Regular;
+	font-size: 18px;
+	letter-spacing: 0;
+	line-height: 30.06px;
+	width: 550px;
+	padding-right: 828px;
+	height: 508px;
+}
+
+#addPicture {
+background: #D8D8D8;
+border-radius: 24px;
+width: 480px;
+height: 48px;
+overflow: hidden;
+}
+
+/*#hide input[type=file] {
+display:none;
+margin:10px;
+}
+#hide input[type=file] + label {
+display:inline-block;
+margin:20px;
+padding: 4px 32px;
+background-color: #FFFFFF;
+border:solid 1px #666F77;
+border-radius: 6px;
+color:#666F77;
+}
+#hide input[type=file]:active + label {
+background-image: none;
+background-color:#2D6C7A;
+color:#FFFFFF;
+}
+*/
+
+
+
+
+
+
+#formi {
+border: 3px solid #D0D0D0;
+border-radius: 24px;
+background-color: white;
+width: 480px;
+height: 48px;
+}
+
+
+input {
+ outline:none;
+}
+
+
+input[type=text]:focus {
+  border: 3px solid #E5007C !important;
+}
+input[type=e-mail]:focus {
+  border: 3px solid #E5007C !important;
+}
+
+div:focus {
+  color:  #E5007C !important;
+  outline:none;
+
+}
+
+/*#formi input{
+border: 3px solid #E5007C;
+}*/
+
+.left3 {
+
+}
+
+.right3 {
+font-family: Vinkel-Regular, Arial, sans-serif;
+font-size: 14px;
+margin-top: 103px;
+margin-left: 146px;
+width: 480px;
+}
+
+/* The container */
+.boxcontainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Vinkel-Regular;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 0;
+	padding-top: 33px;
+}
+
+/* Hide the browser's default checkbox */
+.boxcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border: 1px solid #D0D0D0;
+
+
+}
+
+/* On mouse-over, add a grey background color */
+.boxcontainer:hover input ~ .checkmark {
+  background-color: #E5007C;
+}
+
+/* When the checkbox is checked, add a blue background */
+.boxcontainer input:checked ~ .checkmark {
+  background-color: #E5007C;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.boxcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.boxcontainer .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+a {
+	color: #E5007C;
+}
+
+
+/*section 4*/
+
+#section4 {
+background-color: white;
+	position: center;
+	margin-left: 150px;
+	width: 1600px;
+	height: 910px;
+	align-items: center;
+	right: 170px;
+
+}
+
+#rules {
+font-family: Vinkel-Bold;
+font-size: 32px;
+color: #000000;
+letter-spacing: 0;
+line-height: 50.4px;
+margin-top: 100px;
+padding-left: 222px;
+}
+
+#left4 > p {
+	background-color: white;
+	position: center;
+	padding-left: 222px;
+	width: 300px;
+	height: 712px;
+	right: 170px;
+	margin-bottom: 20px;
+	font-family: Vinkel-Regular, Arial, sans-serif;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 26.72px;
+}
+
+#rulestext{
+	width: 481px;
+	padding-left: 613px;
+	font-family: Vinkel-Regular, Arial, sans-serif;
+	padding-top: 100px;
+	font-size: 14px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 23.38px;
+	height: 712px;
+}
+ #left4 {
+float: left;
+ }
+
+ #right > #rulestext {
+float: left;
+ }
+
+
+.footer {
+	background-color: #E5007C;
+	width: 2000px;
+}
+
+#footerlogo {
+	  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@font-face {
+font-family: Vinkel-Bold;
+src: url(https://materiaalit.g.works/rekry/harkkatehtava/assets/fonts/Vinkel-Bold.otf);
+font-weight: bold;
+}
+@font-face {
+font-family: Vinkel-Light;
+src: url(https://materiaalit.g.works/rekry/harkkatehtava/assets/fonts/Vinkel-Light.otf);
+font-weight: lighter;
+font-style: normal;
+}
+@font-face {
+font-family: Vinkel-Regular;
+src: url(https://materiaalit.g.works/rekry/harkkatehtava/assets/fonts/Vinkel-Regular.otf);
+font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
