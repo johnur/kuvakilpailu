@@ -1,12 +1,47 @@
 <?php get_header(); ?>
 <?php
+
   // Create database connection
-  $db = mysqli_connect("", "", "", "image_upload");
+  $db = mysqli_connect("localhost", "root", "root", "image_upload");
 
   // Initialize message variable
   $msg = "";
  //If like button klicked
- 
+ if(isset($_POST['iiid']))
+{
+  //echo "<pre>";
+  $iiid = $_POST['iiid'];
+  $how_many_likes_sql = "SELECT * FROM competition";
+  $result = mysqli_query($db, $how_many_likes_sql);
+  if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+      echo "onko " . $row['id'] . " == $iiid?<br>";
+      if($row['id'] == $iiid)
+      {
+        $num_of_likes = $row['piclike'];
+        // echo "<pre>";
+        // echo "num of likes $num_of_likes<br>";
+        // die();
+      }
+    }
+  }
+  if(!is_numeric($num_of_likes))
+  {
+    $num_of_likes = 1;
+  }
+  else
+  {
+    $num_of_likes++;
+  }
+
+  // die();
+  // print_r($_POST);
+  // $iiid = $_POST['iiid'];
+  $sql2 = "UPDATE competition SET piclike = $num_of_likes WHERE id = $iiid ";
+  //$image_like = mysqli_real_escape_string($db, $_POST['image_like']);
+
+  mysqli_query($db, $sql2);
+}
   if (isset($_POST['likebutton'])) {
   $sql2 = "UPDATE competition SET piclike = piclike + 1 WHERE id = :id ";
   $image_like = mysqli_real_escape_string($db, $_POST['image_like']);
@@ -69,7 +104,10 @@
       echo "<div id='img_div'>";
       	echo "<img src='http://harkka.local/wp-content/themes/g-works/uploads/".$row['image']."' >";
 
-      	echo "<form method='post' action='index.php' enctype='multipart/form-data'><input type='submit' id='voteBtn' value='ÄÄNESTÄ' name='likebutton' > </form>";
+      	echo "<form method='post' action='index.php' enctype='multipart/form-data'>
+        <input type=\"hidden\" value=\"" . $row['id'] . "\" name=\"iiid\"></input>
+        <input type='submit' id='voteBtn' value='ÄÄNESTÄ' name='likebutton' >
+        </form>";
    //    	echo "<label id='voteBtn'>
 			//   <input type='checkbox' name='likebutton' value='JAA'>
 			//   <span class='slider'></span>
